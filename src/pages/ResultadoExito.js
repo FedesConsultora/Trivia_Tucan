@@ -22,11 +22,10 @@ const ResultadoExito = () => {
       </div>
       <p className="resultado-exito-text">Se nota que sos un verdadero amigo de Tucanito porque la tenés clarísima sobre él. <br /> <strong>¡Y eso nos encanta!</strong></p>
       <div className='agradecimientoContainer'>
+            <img src="/assets/images/flechaAbajo.webp" alt="Flecha" className="arrow" />
             <p>Como agradecimiento a tu sabiduría, ya estás participando por increíbles premios.</p>
       </div>
-      <button className="resultado-exito-btn" onClick={handleRetake}>
-        Volver al inicio
-      </button>
+      <div className='aviso'>Si resultás ganador, nos pondremos en contacto con vos. ¡Mucha suerte!</div>
     </div>
   );
 };

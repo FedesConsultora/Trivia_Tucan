@@ -13,6 +13,7 @@
     background-color: #f0f0f0;
     background-size: cover;
     background-image: url('/public/assets/images/fondoCorrecto.webp');
+    overflow: hidden;
     .miniLogo{
         width: 5.5rem;
     }
@@ -36,6 +37,8 @@
           margin: 0 1rem;
           width: 30px;
           height: auto;
+          filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
+          -webkit-filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
         }
       }
       .resultado-exito-title {
@@ -50,23 +53,74 @@
         font-size: 1.6rem;
         text-align: center;
       }
-      .agradecimientoContainer{
+      .agradecimientoContainer {
+        position: relative;           // Necesario para pseudo-elementos posicionados
+        z-index: 1;                   // Asegura que el contenido quede por encima
+        border-radius: 20px;          // Radio del borde
+        overflow: visible;             // Ayuda a recortar los pseudo-elementos
         background-color: $color-white;
         color: $color-primary;
         font-weight: 500;
-        padding: 1rem;
-        border: 1.5px solid $color-black;
-        border-radius: 20px;
-        font-size: 1.3rem;
+        font-size: 1.35rem;
         text-align: center;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        -o-border-radius: 20px;
+        padding: 1rem;
         
-        p{
-            margin: 0;
+        // Mantén las reglas existentes (fuentes, etc.)
+        // Elimina "border: ...;" porque usaremos pseudo-elementos para el degradé
+        // ...
+        .arrow{
+            position: absolute;
+            width: 35px;
+            top: -15px;
+            left: 10.2rem;
+            filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
+            -webkit-filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
         }
+        p {
+          margin: 0;
+        }
+      
+        // ::before - Capa inferior con el degradé
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0; 
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -2; // Queda detrás de todo
+          border-radius: inherit; // Aplica el mismo border-radius
+          background: linear-gradient(
+            to right,
+            #4F0F15 0%,
+            #821616 43%,
+            #8B1817 49%,
+            #E52A2C 100%
+          );
+        }
+      
+        // ::after - Capa intermedia, crea el "interior" blanco y deja visible solo el grosor del degradé
+        &::after {
+          content: "";
+          position: absolute;
+          top: 1.5px;   // Grosor del borde arriba
+          left: 1.5px;  // Grosor del borde izquierda
+          right: 1.5px; // Grosor del borde derecha
+          bottom: 1.5px;// Grosor del borde abajo
+          z-index: -1;  // Entre el degradé y el contenido
+          border-radius: inherit;
+          background-color: $color-white; // Color de "relleno" interior
+        }
+      }
+      .aviso{
+        background: $degrade-button;
+        position: relative;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        color: $color-white;
+        width: calc(100% + 4rem);
       }
 }
 

@@ -5,36 +5,139 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 2rem;
   min-height: 100vh;
-  background-color: #f0f0f0; // Ajusta el fondo si lo deseas
+  background-size: cover;
+  background-image: url('/public/assets/images/fondoIncorrecto.webp');
+  overflow: hidden;
+  position: relative;
+  justify-content: space-between;
+  .tucanitoFracaso{
+    position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 16rem;
+        z-index: 3;
+  }
+  .resultado-fracaso-title {
+    text-align: center;
+    font-size: 3rem;
+    color: $color-black;
+    margin-bottom: 1rem;
+    font-weight: 1000;
+  }
+  .resultado-fracaso-subtitle{
+    text-align: center;
+    font-weight: 800;
+    margin: 0;
+  }
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    width: 80%;
+    .line {
+      flex: 1;
+      height: 0.9px;
+      background-color: $color-primary;
+    }
+
+    .arrow {
+      margin: 0 1rem;
+      width: 30px;
+      height: auto;
+    }
+  }
+  .resultado-fracaso-text{
+    color: $color-black;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+  .contenedorBotonRestart{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .btn-start{
+        background: $degrade-button;
+            border: 2.5px solid $color-white;
+            color: $color-white;
+            font-family: "Nunito", sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.518);
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 90%;
+            position: relative;
+    }
+  }
+  .miniLogo{
+    width: 90px;
+    align-self: flex-start;
+    padding-left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .agradecimientoContainer{
+    position: relative;           // Necesario para pseudo-elementos posicionados
+    z-index: 1;                   // Asegura que el contenido quede por encima
+    border-radius: 20px;          // Radio del borde
+    overflow: visible;             // Ayuda a recortar los pseudo-elementos
+    background-color: $color-white;
+    color: $color-black;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: start;
+    padding: 1rem;
+    position: relative;
+    right: 2.1rem;
+    padding-right: 7rem;
+
+    p{
+        margin: 0;
+        strong{
+            font-weight: 1000;
+        }
+    }
+    // ::before - Capa inferior con el degradé
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; 
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -2; // Queda detrás de todo
+        background: linear-gradient(
+          to right,
+          #4F0F15 0%,
+          #821616 43%,
+          #8B1817 49%,
+          #E52A2C 100%
+        );
+      }
+    
+      // ::after - Capa intermedia, crea el "interior" blanco y deja visible solo el grosor del degradé
+      &::after {
+        content: "";
+        position: absolute;
+        top: 1.5px;   // Grosor del borde arriba
+        left: 1.5px;  // Grosor del borde izquierda
+        right: 1.5px; // Grosor del borde derecha
+        bottom: 1.5px;// Grosor del borde abajo
+        z-index: -1;  // Entre el degradé y el contenido
+        background-color: $color-white; // Color de "relleno" interior
+      }
+  }
 }
 
-.resultado-fracaso-title {
-  font-size: 3rem;
-  color: $color-primary;
-  margin-bottom: 1rem;
-}
-
-.resultado-fracaso-text {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.resultado-fracaso-imagen {
-  width: 200px;
-  margin-bottom: 2rem;
-}
-
-.resultado-fracaso-btn {
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 10px;
-  background: $degrade-button;
-  color: $color-white;
-  cursor: pointer;
-  transition: background 0.3s;
-}

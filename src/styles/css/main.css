@@ -445,6 +445,7 @@ body {
   background-color: #f0f0f0;
   background-size: cover;
   background-image: url("/public/assets/images/fondoCorrecto.webp");
+  overflow: hidden;
 }
 .resultado-exito-container .miniLogo {
   width: 5.5rem;
@@ -469,6 +470,8 @@ body {
   margin: 0 1rem;
   width: 30px;
   height: auto;
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
+  -webkit-filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
 }
 .resultado-exito-container .resultado-exito-title {
   text-align: center;
@@ -483,59 +486,188 @@ body {
   text-align: center;
 }
 .resultado-exito-container .agradecimientoContainer {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: visible;
   background-color: #FFFFFF;
   color: #E20D1E;
   font-weight: 500;
-  padding: 1rem;
-  border: 1.5px solid #000000;
-  border-radius: 20px;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   text-align: center;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  padding: 1rem;
+}
+.resultado-exito-container .agradecimientoContainer .arrow {
+  position: absolute;
+  width: 35px;
+  top: -15px;
+  left: 10.2rem;
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
+  -webkit-filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
 }
 .resultado-exito-container .agradecimientoContainer p {
   margin: 0;
+}
+.resultado-exito-container .agradecimientoContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  border-radius: inherit;
+  background: linear-gradient(to right, #4F0F15 0%, #821616 43%, #8B1817 49%, #E52A2C 100%);
+}
+.resultado-exito-container .agradecimientoContainer::after {
+  content: "";
+  position: absolute;
+  top: 1.5px;
+  left: 1.5px;
+  right: 1.5px;
+  bottom: 1.5px;
+  z-index: -1;
+  border-radius: inherit;
+  background-color: #FFFFFF;
+}
+.resultado-exito-container .aviso {
+  background: linear-gradient(to left, #E52A2C 0%, #8B1817 43%, #821616 49%, #4F0F15 100%);
+  position: relative;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  color: #FFFFFF;
+  width: calc(100% + 4rem);
 }
 
 .resultado-fracaso-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 2rem;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-size: cover;
+  background-image: url("/public/assets/images/fondoIncorrecto.webp");
+  overflow: hidden;
+  position: relative;
+  justify-content: space-between;
 }
-
-.resultado-fracaso-title {
-  font-size: 3rem;
-  color: #E20D1E;
-  margin-bottom: 1rem;
+.resultado-fracaso-container .tucanitoFracaso {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 16rem;
+  z-index: 3;
 }
-
-.resultado-fracaso-text {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+.resultado-fracaso-container .resultado-fracaso-title {
   text-align: center;
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 1000;
 }
-
-.resultado-fracaso-imagen {
-  width: 200px;
-  margin-bottom: 2rem;
+.resultado-fracaso-container .resultado-fracaso-subtitle {
+  text-align: center;
+  font-weight: 800;
+  margin: 0;
 }
-
-.resultado-fracaso-btn {
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 10px;
+.resultado-fracaso-container .divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  width: 80%;
+}
+.resultado-fracaso-container .divider .line {
+  flex: 1;
+  height: 0.9px;
+  background-color: #E20D1E;
+}
+.resultado-fracaso-container .divider .arrow {
+  margin: 0 1rem;
+  width: 30px;
+  height: auto;
+}
+.resultado-fracaso-container .resultado-fracaso-text {
+  color: #000000;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+.resultado-fracaso-container .contenedorBotonRestart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.resultado-fracaso-container .contenedorBotonRestart .btn-start {
   background: linear-gradient(to left, #E52A2C 0%, #8B1817 43%, #821616 49%, #4F0F15 100%);
+  border: 2.5px solid #FFFFFF;
   color: #FFFFFF;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.518);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  margin-top: 1rem;
+  padding: 0.5rem;
   cursor: pointer;
   transition: background 0.3s;
+  width: 90%;
+  position: relative;
+}
+.resultado-fracaso-container .miniLogo {
+  width: 90px;
+  align-self: flex-start;
+  padding-left: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.resultado-fracaso-container .agradecimientoContainer {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: visible;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: start;
+  padding: 1rem;
+  position: relative;
+  right: 2.1rem;
+  padding-right: 7rem;
+}
+.resultado-fracaso-container .agradecimientoContainer p {
+  margin: 0;
+}
+.resultado-fracaso-container .agradecimientoContainer p strong {
+  font-weight: 1000;
+}
+.resultado-fracaso-container .agradecimientoContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  background: linear-gradient(to right, #4F0F15 0%, #821616 43%, #8B1817 49%, #E52A2C 100%);
+}
+.resultado-fracaso-container .agradecimientoContainer::after {
+  content: "";
+  position: absolute;
+  top: 1.5px;
+  left: 1.5px;
+  right: 1.5px;
+  bottom: 1.5px;
+  z-index: -1;
+  background-color: #FFFFFF;
 }
 
 /*# sourceMappingURL=main.css.map */
