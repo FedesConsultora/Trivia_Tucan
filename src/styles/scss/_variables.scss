@@ -1,0 +1,42 @@
+// src/styles/scss/_variables.scss
+
+$color-primary: #E20D1E;
+$color-secondary: #5B36C6;
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$degrade-button: linear-gradient(
+  to left,
+  #E52A2C 0%,
+  #8B1817 43%,
+  #821616 49%,
+  #4F0F15 100%
+);
+$degrade-circle: linear-gradient(
+  to top,
+  #E52A2C 0%,
+  #8B1817 43%,
+  #821616 49%,
+  #4F0F15 100%
+);
+$degrade-incorrecto: linear-gradient(
+  to right,
+  #8B1817 0%,
+  #9F1C1B 8%,
+  #C30B3B 20%,
+  #CC2526 30%,
+  #DA2729 48%,
+  #E2292C 78%,
+  #E52A2C 100%
+);
+$degrade-correcto: linear-gradient(
+  to right,
+  #8CC63F 0%,
+  #009245 100%
+);
+
+$degrade-correcto-referencia: linear-gradient(
+  to right,
+  #8bc63f80 0%,
+  #00924480 100%
+);

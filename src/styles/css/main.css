@@ -1,0 +1,436 @@
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-primary {
+  background: linear-gradient(to left, #E52A2C 0%, #8B1817 43%, #821616 49%, #4F0F15 100%);
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #E20D1E;
+}
+
+.App {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.home-container {
+  width: 100vw;
+  background-image: url("/public/assets/images/fondoHome.webp");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.home-container .mancha {
+  position: absolute;
+  width: 100%;
+  opacity: 0.4;
+  z-index: 2;
+}
+.home-container .logo {
+  width: 90%;
+  margin-top: 6rem;
+}
+.home-container .button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.home-container .button-container .btn {
+  position: relative;
+  background: linear-gradient(to left, #E52A2C 0%, #8B1817 43%, #821616 49%, #4F0F15 100%);
+  border: 2.5px solid #FFFFFF;
+  width: 85%;
+  height: 60px;
+  color: #FFFFFF;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.518);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.home-container .button-container .btn .icon-circle {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: linear-gradient(to top, #E52A2C 0%, #8B1817 43%, #821616 49%, #4F0F15 100%);
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.518);
+}
+.home-container .button-container .btn .icon-circle .iconoTrivia {
+  width: 70%;
+  position: relative;
+  top: 10px;
+}
+.home-container .button-container .btn .icon-circle .iconoOfertas {
+  width: 50%;
+  position: relative;
+  top: 10px;
+}
+.home-container .button-container .btn.trivia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.home-container .button-container .btn.trivia p {
+  position: relative;
+  left: 20px;
+}
+.home-container .button-container .btn.ofertas {
+  background: #F2F2F2 !important;
+  color: #000000;
+  height: 55px;
+  border: 2.5px solid #E20D1E;
+  width: 70% !important;
+}
+.home-container .button-container .btn.ofertas .icon-circle {
+  position: absolute;
+  top: -7px;
+  left: 10px;
+  width: 65px;
+  height: 65px;
+}
+.home-container .button-container .btn.ofertas p {
+  position: relative;
+  left: 20px;
+  margin: 0 !important;
+}
+.home-container .footer {
+  width: 80%;
+  border: #E20D1E 2px solid;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: none;
+  position: relative;
+  top: 1rem;
+}
+.home-container .footer .RedesSociales {
+  position: relative;
+  left: 6px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.home-container .footer .RedesSociales li a {
+  width: 100%;
+}
+.home-container .footer .RedesSociales li a img {
+  width: 45px;
+}
+
+.trivia-container {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-image: url("/public/assets/images/FondoBlanco.webp");
+  padding-bottom: 0rem;
+}
+.trivia-container .border-Container {
+  border: 2px solid #E20D1E;
+  border-bottom: none;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.trivia-container .contenedorMinilogo {
+  width: 100%;
+  display: flex;
+}
+.trivia-container .contenedorMinilogo .Minilogo {
+  width: 100px;
+  padding: 2rem;
+  align-self: flex-start;
+}
+.trivia-container .tucanitoFondo {
+  position: absolute;
+  width: 50%;
+  right: 0rem;
+}
+.trivia-container .trivia-title {
+  width: 100%;
+  margin-top: 3.8rem;
+  color: #000000;
+  text-align: center;
+  font-weight: 800;
+  font-size: 4rem;
+  padding-left: 2rem;
+  text-align: start;
+  line-height: 4.3rem;
+  margin-bottom: 0rem;
+}
+.trivia-container .trivia-title .conocer {
+  color: #E20D1E;
+}
+.trivia-container .trivia-title .miMundo {
+  font-weight: 1000;
+}
+.trivia-container .divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  width: 50%;
+}
+.trivia-container .divider .line {
+  flex: 1;
+  height: 1px;
+  width: 3rem;
+  background-color: #E20D1E;
+}
+.trivia-container .divider .arrow {
+  margin: 0 1rem;
+  width: 30px;
+  height: auto;
+}
+.trivia-container .trivia-subtitle {
+  font-size: 1.2rem;
+  color: #000000;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 800;
+  align-self: flex-start;
+  padding-left: 1rem;
+  margin-top: 0rem;
+}
+.trivia-container .trivia-subtitle .por {
+  font-weight: 400;
+}
+.trivia-container .trivia-subtitle .por .increiblesPremios {
+  color: #E20D1E;
+  font-weight: 400;
+}
+.trivia-container .form-trivia {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+.trivia-container .form-trivia .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.trivia-container .form-trivia .form-group input {
+  font-family: "Nunito", sans-serif;
+  padding: 0.8rem;
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: black;
+  border: 1px solid #E20D1E;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  padding-left: 1.5rem;
+}
+.trivia-container .form-trivia .contenedorBotonStart {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #E20D1E;
+  border-top: 0;
+  border-bottom: 0;
+}
+.trivia-container .form-trivia .contenedorBotonStart .btn-start {
+  background: linear-gradient(to left, #E52A2C 0%, #8B1817 43%, #821616 49%, #4F0F15 100%);
+  border: 2.5px solid #FFFFFF;
+  color: #FFFFFF;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.518);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 6rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 90%;
+  position: relative;
+}
+.trivia-container .form-trivia .contenedorBotonStart .btn-start img {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  height: 35px;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  padding-top: 1.7rem;
+  min-height: 100vh;
+  background-size: cover;
+  background-image: url("/public/assets/images/fondoPreguntas.webp");
+}
+.question-container .tuCanHeader {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.question-container .tuCanHeader .miniLogo {
+  width: 70px;
+  z-index: 2;
+}
+.question-container .tuCanHeader .line {
+  position: relative;
+  right: 1rem;
+  flex: 1;
+  height: 1.1px;
+  width: 10rem;
+  background-color: #E20D1E;
+}
+.question-container .question-text {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2.7rem;
+  color: #FFFFFF;
+  font-weight: 900;
+}
+.question-container .divider {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+.question-container .divider .line {
+  flex: 1;
+  height: 0px;
+  width: 3rem;
+}
+.question-container .divider .arrow {
+  margin: 0 1rem;
+  width: 30px;
+  height: auto;
+}
+.question-container .options {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.question-container .options.question2-options {
+  margin-top: 9rem;
+}
+.question-container .options.question3-options {
+  width: 100%;
+}
+.question-container .options.question5-options {
+  margin-top: 9rem;
+  width: 100%;
+}
+.question-container .options .option.wrong {
+  background: linear-gradient(to right, #8B1817 0%, #9F1C1B 8%, #C30B3B 20%, #CC2526 30%, #DA2729 48%, #E2292C 78%, #E52A2C 100%);
+  color: #000000;
+}
+.question-container .options .option.correct.faded {
+  background: linear-gradient(to right, rgba(139, 198, 63, 0.5019607843) 0%, rgba(0, 146, 68, 0.5019607843) 100%);
+  color: #FFFFFF;
+  border: #FFFFFF 1px solid;
+}
+.question-container .options .option.correct {
+  background: linear-gradient(to right, #8CC63F 0%, #009245 100%);
+  color: #FFFFFF;
+  border: #FFFFFF 1px solid;
+}
+.question-container .options .option {
+  display: flex;
+  justify-content: start;
+  border: 0;
+  background-color: transparent;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid #E20D1E;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  margin-bottom: 0.5rem;
+}
+.question-container .options .option .option-letter {
+  font-weight: 900;
+}
+.question-container .options .option .optionText {
+  margin-left: 0.5rem;
+  text-align: start;
+}
+.question-container .botonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.question-container .botonContainer .next-btn {
+  background: linear-gradient(to left, #E52A2C 0%, #8B1817 43%, #821616 49%, #4F0F15 100%);
+  border: 2.5px solid #FFFFFF;
+  color: #FFFFFF;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.518);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 60%;
+  position: relative;
+}
+.question-container .botonContainer .next-btn img {
+  position: absolute;
+  right: 8px;
+  top: 3px;
+  height: 27px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,34 @@
+// src/styles/scss/main.scss
+
+// Importa las variables
+@import 'variables';
+
+// Establece la fuente Nunito en todo el proyecto
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// Ejemplo de clase usando las variables
+.btn-primary {
+  background: $degrade-button;
+  color: $color-white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: $color-primary;
+}
+.App{
+    font-family: "Nunito", sans-serif;
+    min-height: 100vh;
+    z-index: 1;
+}
+@import './home';
+@import './trivia';
+@import './question';

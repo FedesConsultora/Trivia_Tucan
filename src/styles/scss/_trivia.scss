@@ -1,0 +1,156 @@
+// src/styles/scss/trivia.scss
+@import 'variables';
+
+.trivia-container {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-image: url('/public/assets/images/FondoBlanco.webp');
+  padding-bottom: 0rem;
+  .border-Container{
+    border: 2px solid $color-primary;
+    border-bottom: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedorMinilogo{
+    width: 100%;
+    display: flex;
+    .Minilogo{
+        width: 100px;
+        padding: 2rem;
+        align-self: flex-start;
+    }
+  }
+  .tucanitoFondo{
+    position: absolute;
+    width: 50%;
+    right: 0rem;
+  }
+  .trivia-title {
+    width: 100%;
+    margin-top: 3.8rem;
+    color: $color-black;
+    text-align: center;
+    font-weight: 800;
+    font-size: 4rem;
+    padding-left: 2rem;
+    text-align: start;
+    line-height: 4.3rem;
+    margin-bottom: 0rem;
+
+    .conocer{
+        color: $color-primary
+    }
+    .miMundo{
+        font-weight: 1000;
+    }
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    width: 50%;
+    .line {
+      flex: 1;
+      height: 1px;
+      width: 3rem;
+      background-color: $color-primary;
+    }
+
+    .arrow {
+      margin: 0 1rem;
+      width: 30px;
+      height: auto;
+    }
+  }
+
+  .trivia-subtitle {
+    font-size: 1.2rem;
+    color: $color-black;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 800;
+    align-self: flex-start;
+    padding-left: 1rem;
+    margin-top: 0rem;
+    .por{
+        font-weight: 400;
+        .increiblesPremios{
+            color: $color-primary;
+            font-weight: 400;
+        }
+    }
+  }
+  .form-trivia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1rem;
+    .form-group {
+      display: flex;
+      flex-direction: column;
+        
+        input {
+            
+            font-family: "Nunito", sans-serif;
+            padding: 0.8rem;
+            background-color: transparent;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: black;
+            border: 1px solid $color-primary;
+            border-radius: 40px;
+            -webkit-border-radius: 40px;
+            -moz-border-radius: 40px;
+            -ms-border-radius: 40px;
+            -o-border-radius: 40px;
+            padding-left: 1.5rem;
+        }
+    }
+    .contenedorBotonStart{
+        display: flex;
+        justify-content: center;
+        border: 2px solid $color-primary;
+        border-top: 0;
+        border-bottom: 0;
+        .btn-start {
+            background: $degrade-button;
+            border: 2.5px solid $color-white;
+            color: $color-white;
+            font-family: "Nunito", sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.518);
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            margin-bottom: 6rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 90%;
+            position: relative;
+            img{
+                position: absolute;
+                right: 8px;
+                top: 7px;
+                height: 35px;
+            }
+        }
+    }
+    
+  }
+}
