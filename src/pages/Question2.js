@@ -8,10 +8,10 @@ const questionData = {
   question: "¿De qué signo es Tucanito?",
   options: [
     "Piscis: Es sensible, cariñoso y siempre está dispuesto a ayudar.",
-    "Escorpio: Es misterioso, leal y tiene una mirada intensa.", // Correcta
+    "Escorpio: Es misterioso, leal y tiene una mirada intensa.", 
     "Sagitario: Es aventurero, terco y tiene energía de sobra."
   ],
-  correctIndex: 1,
+  correctIndex: 2,
 };
 
 const Question2 = () => {

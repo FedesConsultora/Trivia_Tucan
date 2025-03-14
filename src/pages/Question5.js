@@ -7,7 +7,7 @@ import { useQuiz } from '../context/QuizContext';
 const questionData = {
   question: "¿Cómo llegó Tucanito a TuCan?",
   options: [
-    "Fue rescatado y encontró su hogar en TuCan.", // Correcta
+    "Fue rescatado y encontró su hogar en TuCan.", 
     "Es un misterio… sólo los verdaderos tucaneros lo saben.",
     "Lo adoptó un cliente muy especial y se convirtió en parte de la familia."
   ],

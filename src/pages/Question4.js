@@ -7,11 +7,11 @@ import { useQuiz } from '../context/QuizContext';
 const questionData = {
   question: "Si hablamos de TuCan, hablamos de...",
   options: [
-    "El petshop que tiene todo lo que necesitás.", // Correcta (índice 0)
+    "El petshop que tiene todo lo que necesitás.", 
     "El supermercado de mascotas más grande de la ciudad.",
     "Una veterinaria que ofrecé atención 24/7."
   ],
-  correctIndex: 0,
+  correctIndex: 1,
 };
 
 const Question4 = () => {

@@ -1,0 +1,40 @@
+// src/styles/scss/resultadoFracaso.scss
+@import 'variables';
+
+.resultado-fracaso-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #f0f0f0; // Ajusta el fondo si lo deseas
+}
+
+.resultado-fracaso-title {
+  font-size: 3rem;
+  color: $color-primary;
+  margin-bottom: 1rem;
+}
+
+.resultado-fracaso-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.resultado-fracaso-imagen {
+  width: 200px;
+  margin-bottom: 2rem;
+}
+
+.resultado-fracaso-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: $degrade-button;
+  color: $color-white;
+  cursor: pointer;
+  transition: background 0.3s;
+}

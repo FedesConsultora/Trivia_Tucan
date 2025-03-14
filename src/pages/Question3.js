@@ -7,7 +7,7 @@ import { useQuiz } from '../context/QuizContext';
 const questionData = {
   question: "¿Cuál de los locales de TuCan es el más grande?",
   options: [
-    "Camino Belgrano y 516.", // Correcta
+    "Camino Belgrano y 516.", 
     "32 entre 6 y 7.",
     "18 esquina 50."
   ],

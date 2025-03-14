@@ -433,4 +433,109 @@ body {
   height: 27px;
 }
 
+.resultado-exito-container {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 2rem;
+  padding-top: 6rem;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-image: url("/public/assets/images/fondoCorrecto.webp");
+}
+.resultado-exito-container .miniLogo {
+  width: 5.5rem;
+}
+.resultado-exito-container .tucanitoExito {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 9rem;
+}
+.resultado-exito-container .divider {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+.resultado-exito-container .divider .line {
+  flex: 1;
+  height: 0px;
+  width: 3rem;
+}
+.resultado-exito-container .divider .arrow {
+  margin: 0 1rem;
+  width: 30px;
+  height: auto;
+}
+.resultado-exito-container .resultado-exito-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+.resultado-exito-container .resultado-exito-text {
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.resultado-exito-container .agradecimientoContainer {
+  background-color: #FFFFFF;
+  color: #E20D1E;
+  font-weight: 500;
+  padding: 1rem;
+  border: 1.5px solid #000000;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  text-align: center;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.resultado-exito-container .agradecimientoContainer p {
+  margin: 0;
+}
+
+.resultado-fracaso-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.resultado-fracaso-title {
+  font-size: 3rem;
+  color: #E20D1E;
+  margin-bottom: 1rem;
+}
+
+.resultado-fracaso-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.resultado-fracaso-imagen {
+  width: 200px;
+  margin-bottom: 2rem;
+}
+
+.resultado-fracaso-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to left, #E52A2C 0%, #8B1817 43%, #821616 49%, #4F0F15 100%);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
 /*# sourceMappingURL=main.css.map */
