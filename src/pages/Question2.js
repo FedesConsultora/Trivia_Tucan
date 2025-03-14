@@ -2,26 +2,39 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Question from '../components/Question';
+import { useQuiz } from '../context/QuizContext';
 
 const questionData = {
   question: "¿De qué signo es Tucanito?",
   options: [
     "Piscis: Es sensible, cariñoso y siempre está dispuesto a ayudar.",
-    "Escorpio: Es misterioso, leal y tiene una mirada intensa.", // Opción correcta
+    "Escorpio: Es misterioso, leal y tiene una mirada intensa.", // Correcta
     "Sagitario: Es aventurero, terco y tiene energía de sobra."
   ],
-  correctIndex: 1, // Escorpio es la correcta (índice 1)
+  correctIndex: 1,
 };
 
 const Question2 = () => {
   const navigate = useNavigate();
+  const { updateResult } = useQuiz();
+
+  const handleAnswer = (isCorrect) => {
+    updateResult('question2', isCorrect);
+  };
 
   const handleNext = () => {
-    // Navega a la siguiente pregunta, por ejemplo: /question3
     navigate('/question3');
   };
 
-  return <Question questionData={questionData} onNext={handleNext} questionClass="question2-options" patitaImage="patita2.webp" />;
+  return (
+    <Question 
+      questionData={questionData} 
+      onNext={handleNext} 
+      onAnswer={handleAnswer}
+      questionClass="question2-options" 
+      patitaImage="patita2.webp" 
+    />
+  );
 };
 
 export default Question2;

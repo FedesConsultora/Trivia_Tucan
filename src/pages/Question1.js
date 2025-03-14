@@ -11,7 +11,7 @@ const questionData = {
     "Dos, para que no falte nada.", 
     "Tres, porque el amor por las mascotas debe estar en todos lados."
   ],
-  correctIndex: 2, // índice 2 para la tercera opción
+  correctIndex: 2,
 };
 
 const Question1 = () => {
@@ -31,8 +31,8 @@ const Question1 = () => {
       questionData={questionData} 
       onNext={handleNext} 
       onAnswer={handleAnswer}
-      questionClass="question1-options"
-      patitaImage="patita1.webp"
+      questionClass="question1-options" 
+      patitaImage="patita1.webp" 
     />
   );
 };

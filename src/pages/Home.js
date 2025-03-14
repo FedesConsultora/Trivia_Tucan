@@ -42,7 +42,7 @@ const Home = () => {
           </li>
           <li>
             <a href="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" target="_blank" rel="noopener noreferrer">
-              <img src="/assets/icons/Linkedin.webp" alt="icono linkedin" className="iconoLinkedin" />
+              <img src="/assets/icons/LinkedIn.webp" alt="icono linkedin" className="iconoLinkedin" />
             </a>
           </li>
         </ul>
