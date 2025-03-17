@@ -58,6 +58,7 @@
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
+    color: $color-black;
     &.question2-options{
         margin-top: 9rem;
     }
@@ -100,6 +101,7 @@
         -ms-border-radius: 40px;
         -o-border-radius: 40px;
         margin-bottom: 0.5rem;
+        color: $color-black;
         .option-letter{
             font-weight: 900;
         }
