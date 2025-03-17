@@ -194,6 +194,7 @@ body {
   text-align: start;
   line-height: 4.3rem;
   margin-bottom: 0rem;
+  line-height: 4rem;
 }
 .trivia-container .trivia-title .conocer {
   color: #E20D1E;
@@ -331,6 +332,7 @@ body {
   font-size: 2.7rem;
   color: #FFFFFF;
   font-weight: 900;
+  line-height: 3.6rem;
 }
 .question-container .divider {
   display: flex;
@@ -433,6 +435,40 @@ body {
   height: 27px;
 }
 
+@media (min-width: 470px) {
+  .question-container.question1-options .divider {
+    margin-bottom: 5rem !important;
+  }
+  .question-container.question2-options .divider {
+    margin-bottom: 5rem !important;
+  }
+  .question-container.question3-options .divider {
+    margin-bottom: 5rem !important;
+  }
+  .question-container.question4-options .divider {
+    margin-bottom: 5rem !important;
+  }
+  .question-container.question5-options .divider {
+    margin-bottom: 5rem !important;
+  }
+}
+@media (min-width: 510px) {
+  .question-container.question1-options .divider {
+    margin-bottom: 12rem !important;
+  }
+  .question-container.question2-options .divider {
+    margin-bottom: 13rem !important;
+  }
+  .question-container.question3-options .divider {
+    margin-bottom: 14rem !important;
+  }
+  .question-container.question4-options .divider {
+    margin-bottom: 14rem !important;
+  }
+  .question-container.question5-options .divider {
+    margin-bottom: 13rem !important;
+  }
+}
 .resultado-exito-container {
   font-family: "Nunito", sans-serif;
   display: flex;
@@ -498,10 +534,7 @@ body {
   padding: 1rem;
 }
 .resultado-exito-container .agradecimientoContainer .arrow {
-  position: absolute;
   width: 35px;
-  top: -15px;
-  left: 10.2rem;
   filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
   -webkit-filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
 }

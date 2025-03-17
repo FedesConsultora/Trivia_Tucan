@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSoundContext } from '../context/SoundContext';
 
-const Question = ({ questionData, onNext, onAnswer, questionClass = "", patitaImage = 'patita1.webp' }) => {
+const Question = ({ questionData, onNext, onAnswer, questionClass = "", patitaImage = 'patita1.webp', loading  }) => {
   const [selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);
   
@@ -47,6 +47,7 @@ const Question = ({ questionData, onNext, onAnswer, questionClass = "", patitaIm
   };
 
   const handleNext = () => {
+    if (loading) return;
     playBoton(); // Sonido click para botón siguiente
     onNext();
   };

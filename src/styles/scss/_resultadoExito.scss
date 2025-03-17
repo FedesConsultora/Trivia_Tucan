@@ -69,10 +69,7 @@
         // Elimina "border: ...;" porque usaremos pseudo-elementos para el degradé
         // ...
         .arrow{
-            position: absolute;
             width: 35px;
-            top: -15px;
-            left: 10.2rem;
             filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
             -webkit-filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.518));
         }
