@@ -1,9 +1,12 @@
 // src/components/FormTrivia.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSoundContext } from '../context/SoundContext';
 
 const FormTrivia = () => {
   const navigate = useNavigate();
+  const { playBoton, stopInicio } = useSoundContext();
+
   const [formData, setFormData] = useState({
     nombreCompleto: '',
     email: '',
@@ -16,10 +19,12 @@ const FormTrivia = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica de envío del formulario
-    console.log('Datos del formulario:', formData);
-    // Redirige a la primera pregunta
-    navigate('/question1');
+    playBoton();   // Sonido del click
+    stopInicio();  // Detiene el sonido de fondo al salir de la pantalla inicial
+
+    // Aquí podés agregar lógica adicional (validaciones, envíos, etc.)
+
+    navigate('/question1'); // Navegamos a la primera pregunta
   };
 
   return (
@@ -31,7 +36,7 @@ const FormTrivia = () => {
           name="nombreCompleto"
           value={formData.nombreCompleto}
           onChange={handleChange}
-          placeholder="Nombre completo"
+          placeholder='Nombre completo'
           required
         />
       </div>
@@ -43,7 +48,7 @@ const FormTrivia = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="Correo electrónico"
+          placeholder='Correo electrónico'
           required
         />
       </div>
@@ -55,13 +60,13 @@ const FormTrivia = () => {
           name="telefono"
           value={formData.telefono}
           onChange={handleChange}
-          placeholder="Teléfono"
+          placeholder='Teléfono'
           required
         />
       </div>
-      <div className="contenedorBotonStart">
+      <div className='contenedorBotonStart'>
         <button type="submit" className="btn-start">
-          ¡Empecemos! <img src="/assets/images/flechaDerecha.webp" alt="flecha derecha" />
+          ¡Empecemos! <img src="/assets/images/flechaDerecha.webp" alt="flecha derecha"/>
         </button>
       </div>
     </form>

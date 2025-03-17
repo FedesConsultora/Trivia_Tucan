@@ -1,14 +1,18 @@
 // src/pages/ResultadoExito.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSoundContext } from '../context/SoundContext';
 
 const ResultadoExito = () => {
-  const navigate = useNavigate();
+  const { playResultadoExito } = useSoundContext();
 
-  const handleRetake = () => {
-    // Opcional: navega a la página de inicio o reinicia la trivia
-    navigate('/');
-  };
+  useEffect(() => {
+    playResultadoExito(); // Reproduce el sonido de éxito cuando se carga la página
+
+    return () => {
+      // Aquí podés detener otros sonidos si es necesario al desmontar
+    };
+  }, [playResultadoExito]);
 
   return (
     <div className="resultado-exito-container">

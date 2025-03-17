@@ -1,17 +1,35 @@
 // src/components/Question.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSoundContext } from '../context/SoundContext';
 
 const Question = ({ questionData, onNext, onAnswer, questionClass = "", patitaImage = 'patita1.webp' }) => {
   const [selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);
+  
+  const { 
+    playPregunta, 
+    stopPregunta, 
+    playRespuestaCorrecta, 
+    playRespuestaIncorrecta,
+    playBoton,
+  } = useSoundContext();
+
+  useEffect(() => {
+    console.log('entre')
+    playPregunta(); 
+
+    return () => stopPregunta(); 
+  }, [playPregunta, stopPregunta]);
 
   const handleOptionClick = (index) => {
-    if (answered) return; 
+    if (answered) return;
     setSelected(index);
     setAnswered(true);
-    if (onAnswer) {
-      onAnswer(index === questionData.correctIndex);
-    }
+
+    const isCorrect = index === questionData.correctIndex;
+    if (onAnswer) onAnswer(isCorrect);
+
+    isCorrect ? playRespuestaCorrecta() : playRespuestaIncorrecta();
   };
 
   const getOptionClass = (index) => {
@@ -26,6 +44,11 @@ const Question = ({ questionData, onNext, onAnswer, questionClass = "", patitaIm
     }
 
     return "option";
+  };
+
+  const handleNext = () => {
+    playBoton(); // Sonido click para botón siguiente
+    onNext();
   };
 
   return (
@@ -56,7 +79,7 @@ const Question = ({ questionData, onNext, onAnswer, questionClass = "", patitaIm
       </div>
       {answered && (
         <div className='botonContainer'>
-          <button className="next-btn" onClick={onNext}>
+          <button className="next-btn" onClick={handleNext}>
             Siguiente <img src="/assets/images/flechaDerecha.webp" alt="flecha derecha" />
           </button>
         </div>
