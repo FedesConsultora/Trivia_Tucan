@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Question from '../components/Question';
 import { useQuiz } from '../context/QuizContext';
 import { saveTriviaResult } from '../services/api';
+import { useSoundContext } from '../context/SoundContext';
 
 const questionData = {
   question: "¿Cómo llegó Tucanito a TuCan?",
@@ -19,6 +20,7 @@ const Question5 = () => {
   const navigate = useNavigate();
   const { updateResult, results, user } = useQuiz();
   const [loading, setLoading] = useState(false); // Estado de carga
+  const { stopTriviaMusic } = useSoundContext();
   const handleAnswer = (isCorrect) => {
     updateResult('question5', isCorrect);
   };
@@ -33,6 +35,7 @@ const Question5 = () => {
     try {
       const res = await saveTriviaResult({ ...user, ganador });
       console.log("Resultado guardado:", res);
+      stopTriviaMusic();
       navigate(allCorrect ? '/resultado-exito' : '/resultado-fracaso');
     } catch (err) {
       console.error("Error al guardar resultado trivia:", err);

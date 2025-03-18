@@ -4,14 +4,16 @@ import FormTrivia from '../components/FormTrivia';
 import { useSoundContext } from '../context/SoundContext';
 
 const Trivia = () => {
-  const { playInicio, stopInicio } = useSoundContext();
+  const { playInicio, stopInicio, setIsTriviaActive  } = useSoundContext();
 
   useEffect(() => {
     playInicio(); // Sonido de fondo al iniciar la trivia
 
     return () => stopInicio(); // Se detiene al desmontar
   }, [playInicio, stopInicio]);
-
+  const handleStartTrivia = () => {
+    setIsTriviaActive(true); // Activa la música de las preguntas
+  };
   return (
     <div className="trivia-container">
       <div className="border-Container">
@@ -33,7 +35,7 @@ const Trivia = () => {
           <span className="por">por <strong className="increiblesPremios">increíbles premios.</strong></span>
         </p>
       </div>
-      <FormTrivia />
+      <FormTrivia onStartTrivia={handleStartTrivia} />
     </div>
   );
 };

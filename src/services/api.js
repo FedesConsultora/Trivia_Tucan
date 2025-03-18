@@ -1,5 +1,4 @@
 const API_URL = process.env.REACT_APP_APPS_SCRIPT_URL;
-console.log("API_URL:", API_URL);
 
 export const saveUTMs = async (utmData) => {
   try {

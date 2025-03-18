@@ -713,4 +713,130 @@ body {
   background-color: #FFFFFF;
 }
 
+.ofertas-container {
+  width: 100vw;
+  background-image: url("/public/assets/images/fondoHome.webp");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 1rem;
+}
+.ofertas-container .navContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.ofertas-container .navContainer .flechaYtitulo {
+  display: flex;
+  margin-top: 3.5rem;
+  width: 100%;
+  justify-content: center;
+}
+.ofertas-container .navContainer .flechaYtitulo .btnBack {
+  align-self: flex-start;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  top: 0.33rem;
+  margin-right: 1rem;
+}
+.ofertas-container .navContainer .flechaYtitulo .btnBack img {
+  width: 100%;
+}
+.ofertas-container .navContainer .flechaYtitulo h1 {
+  font-weight: 1000;
+  font-size: 2.3rem;
+  margin: 0;
+  color: #FFFFFF;
+}
+.ofertas-container .navContainer .flechaYtitulo h1 span {
+  color: transparent;
+  -webkit-text-stroke: 0.7px white;
+}
+.ofertas-container .navContainer .carousel {
+  width: 80%;
+  margin-top: 2rem;
+  position: relative;
+  overflow: visible;
+  user-select: none;
+}
+.ofertas-container .navContainer .carousel .swiper {
+  height: fit-content;
+}
+.ofertas-container .navContainer .carousel .swiper-wrapper {
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+.ofertas-container .navContainer .carousel .swiper-slide.carousel-item {
+  position: relative;
+  overflow: visible;
+  transition: transform 0.3s;
+}
+.ofertas-container .navContainer .carousel .swiper-slide.carousel-item a {
+  display: block;
+}
+.ofertas-container .navContainer .carousel .swiper-slide.carousel-item a img {
+  padding-right: 1rem;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+.ofertas-container .navContainer .carousel .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 3;
+}
+.ofertas-container .navContainer .carousel .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #5B36C6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ofertas-container .navContainer .carousel .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #5B36C6;
+}
+.ofertas-container .navContainer .border {
+  width: 80%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  margin-top: 1rem !important;
+}
+.ofertas-container .footer {
+  width: 80%;
+  border: #E20D1E 2px solid;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: none;
+  margin-top: 1rem;
+  position: relative;
+}
+.ofertas-container .footer .RedesSociales {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1rem;
+  margin: 0;
+}
+.ofertas-container .footer .RedesSociales li a img {
+  width: 45px;
+}
+
 /*# sourceMappingURL=main.css.map */

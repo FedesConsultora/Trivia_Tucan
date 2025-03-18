@@ -7,19 +7,12 @@ const Question = ({ questionData, onNext, onAnswer, questionClass = "", patitaIm
   const [answered, setAnswered] = useState(false);
   
   const { 
-    playPregunta, 
-    stopPregunta, 
     playRespuestaCorrecta, 
     playRespuestaIncorrecta,
     playBoton,
   } = useSoundContext();
 
-  useEffect(() => {
-    console.log('entre')
-    playPregunta(); 
-
-    return () => stopPregunta(); 
-  }, [playPregunta, stopPregunta]);
+ 
 
   const handleOptionClick = (index) => {
     if (answered) return;

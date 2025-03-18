@@ -1,0 +1,142 @@
+// src/styles/scss/ofertas.scss
+@import 'variables';
+
+.ofertas-container {
+  width: 100vw;
+  background-image: url('/public/assets/images/fondoHome.webp'); // O podés usar otro fondo si lo prefieres
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 1rem;
+
+  .navContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+    .flechaYtitulo{
+        display: flex;
+        margin-top: 3.5rem;
+        width: 100%;
+        justify-content: center;
+        .btnBack {
+            align-self: flex-start;
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            position: relative;
+            top: 0.33rem;
+            margin-right: 1rem;
+            img {
+              width: 100%;
+              
+            }
+        }
+        h1{
+            font-weight: 1000;
+            font-size: 2.3rem;
+            margin: 0;
+            color: $color-white;
+            span{
+                color: transparent;
+                -webkit-text-stroke: 0.7px white;
+                
+            }
+        }
+    }
+    
+
+    .carousel {
+        width: 80%;
+        margin-top: 2rem;
+        position: relative;
+        overflow: visible; // Permite que la sombra se muestre
+        user-select: none;
+  
+        .swiper {
+          height: fit-content;
+        }
+        .swiper-wrapper {
+          display: flex;
+          margin-bottom: 2.5rem;
+        }
+        .swiper-slide.carousel-item {
+          position: relative;
+          overflow: visible; // Importante para que la sombra no se recorte
+          transition: transform 0.3s;
+          
+          
+          a {
+            display: block;
+            img {
+              padding-right: 1rem;
+              width: 100%;
+              height: auto;
+              border-radius: 10px;
+              box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+              display: block;
+            }
+          }
+        }
+        .swiper-pagination {
+          display: flex;
+          justify-content: center;
+          gap: 0.5rem;
+          z-index: 3;
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: $color-secondary;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+          .swiper-pagination-bullet-active {
+            background-color: $color-secondary;
+          }
+        }
+      }
+    .border {
+      width: 80%;
+      height: 2px;
+      border-radius: 10px;
+      background-color: $color-white;
+      margin-top: 1rem !important;
+    }
+  }
+
+  .footer {
+    width: 80%;
+    border: $color-primary 2px solid;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: none;
+    margin-top: 1rem;
+    position: relative;
+    .RedesSociales {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      padding: 0 1rem;
+      margin: 0;
+      li {
+        a {
+          img {
+            width: 45px;
+          }
+        }
+      }
+    }
+  }
+}
