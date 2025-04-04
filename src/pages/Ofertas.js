@@ -7,12 +7,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const slides = [
-  { link: '', img: '/assets/images/ofertas/oferta1.jpg', alt: 'Oferta 1' },
-  { link: '', img: '/assets/images/ofertas/oferta2.jpg', alt: 'Oferta 2' },
-  { link: '', img: '/assets/images/ofertas/oferta3.jpg', alt: 'Oferta 3' },
-  { link: '', img: '/assets/images/ofertas/oferta4.jpg', alt: 'Oferta 4' },
-  { link: '', img: '/assets/images/ofertas/oferta5.jpg', alt: 'Oferta 5' },
-  { link: '', img: '/assets/images/ofertas/oferta6.jpg', alt: 'Oferta 6' },
+  { link: '', img: '/assets/images/ofertas/abril-01.jpg', alt: 'Oferta 1' },
+  { link: '', img: '/assets/images/ofertas/abril-02.jpg', alt: 'Oferta 2' },
+  { link: '', img: '/assets/images/ofertas/abril-03.jpg', alt: 'Oferta 3' },
+  { link: '', img: '/assets/images/ofertas/abril-04.jpg', alt: 'Oferta 4' },
+  { link: '', img: '/assets/images/ofertas/abril-05.jpg', alt: 'Oferta 5' },
+  { link: '', img: '/assets/images/ofertas/abril-06.jpg', alt: 'Oferta 6' },
   // Agrega o quita slides según lo necesites
 ];
 

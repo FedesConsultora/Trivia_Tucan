@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -11,21 +10,28 @@ import Question5 from './pages/Question5';
 import ResultadoExito from './pages/ResultadoExito';
 import ResultadoFracaso from './pages/ResultadoFracaso';
 import Ofertas from './pages/Ofertas';
+import TruckButton from './components/TruckButton';
+import ShippingModal from './components/ShippingModal';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/trivia" element={<Trivia />} />
-      <Route path="/question1" element={<Question1 />} />
-      <Route path="/question2" element={<Question2 />} />
-      <Route path="/question3" element={<Question3 />} />
-      <Route path="/question4" element={<Question4 />} />
-      <Route path="/question5" element={<Question5 />} />
-      <Route path="/resultado-exito" element={<ResultadoExito />} />
-      <Route path="/resultado-fracaso" element={<ResultadoFracaso />} />
-      <Route path="/promos" element={<Ofertas />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/trivia" element={<Trivia />} />
+        <Route path="/question1" element={<Question1 />} />
+        <Route path="/question2" element={<Question2 />} />
+        <Route path="/question3" element={<Question3 />} />
+        <Route path="/question4" element={<Question4 />} />
+        <Route path="/question5" element={<Question5 />} />
+        <Route path="/resultado-exito" element={<ResultadoExito />} />
+        <Route path="/resultado-fracaso" element={<ResultadoFracaso />} />
+        <Route path="/promos" element={<Ofertas />} />
+      </Routes>
+      {/* Botón flotante de WhatsApp */}
+      <TruckButton />
+      <ShippingModal />
+    </>
   );
 }
 

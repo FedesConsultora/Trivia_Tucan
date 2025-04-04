@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -840,6 +841,81 @@ body {
 }
 .ofertas-container .footer .RedesSociales li a img {
   width: 45px;
+}
+
+/* src/components/TruckButton.css */
+.truck-button-container {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffffff; /* Podés cambiar este color según tus necesidades */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+.truck-button-container .lf-player-container {
+  position: relative;
+  bottom: 5px;
+  right: 2px;
+}
+
+.truck-button-container:active {
+  transform: scale(0.95);
+}
+
+.truck-button-player {
+  pointer-events: none;
+}
+
+.shipping-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.25);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shipping-modal-content {
+  background: #FFFFFF;
+  padding: 1.7rem;
+  border: 2.5px solid #E20D1E;
+  border-radius: 25px;
+  width: 70%;
+  text-align: center;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  color: #E20D1E;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.shipping-modal-content h2 {
+  font-weight: 900;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.shipping-modal-close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.7rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #E20D1E;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */
