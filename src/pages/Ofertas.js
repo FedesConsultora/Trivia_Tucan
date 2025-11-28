@@ -7,13 +7,16 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const slides = [
-  { link: '', img: '/assets/images/ofertas/abril-01.jpg', alt: 'Oferta 1' },
-  { link: '', img: '/assets/images/ofertas/abril-02.jpg', alt: 'Oferta 2' },
-  { link: '', img: '/assets/images/ofertas/abril-03.jpg', alt: 'Oferta 3' },
-  { link: '', img: '/assets/images/ofertas/abril-04.jpg', alt: 'Oferta 4' },
-  { link: '', img: '/assets/images/ofertas/abril-05.jpg', alt: 'Oferta 5' },
-  { link: '', img: '/assets/images/ofertas/abril-06.jpg', alt: 'Oferta 6' },
-  // Agrega o quita slides según lo necesites
+  { link: '', img: '/assets/images/ofertas/of-ban-1.png', alt: 'Oferta 1' },
+  { link: '', img: '/assets/images/ofertas/of-ban-2.png', alt: 'Oferta 2' },
+  { link: '', img: '/assets/images/ofertas/of-ban-3.png', alt: 'Oferta 3' },
+  { link: '', img: '/assets/images/ofertas/of-ban-4.png', alt: 'Oferta 4' },
+  { link: '', img: '/assets/images/ofertas/of-ban-5.png', alt: 'Oferta 5' },
+  { link: '', img: '/assets/images/ofertas/of-ban-6.png', alt: 'Oferta 6' },
+  { link: '', img: '/assets/images/ofertas/of-1.png', alt: 'Oferta 7' },
+  { link: '', img: '/assets/images/ofertas/of-2.png', alt: 'Oferta 8' },
+  { link: '', img: '/assets/images/ofertas/of-3.png', alt: 'Oferta 9' },
+  { link: '', img: '/assets/images/ofertas/of-4.png', alt: 'Oferta 10' },
 ];
 
 const Ofertas = () => {
