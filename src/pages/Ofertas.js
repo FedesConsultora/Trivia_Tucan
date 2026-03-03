@@ -13,10 +13,7 @@ const slides = [
   { link: '', img: '/assets/images/ofertas/of-ban-4.png', alt: 'Oferta 4' },
   { link: '', img: '/assets/images/ofertas/of-ban-5.png', alt: 'Oferta 5' },
   { link: '', img: '/assets/images/ofertas/of-ban-6.png', alt: 'Oferta 6' },
-  { link: '', img: '/assets/images/ofertas/of-1.png', alt: 'Oferta 7' },
-  { link: '', img: '/assets/images/ofertas/of-2.png', alt: 'Oferta 8' },
-  { link: '', img: '/assets/images/ofertas/of-3.png', alt: 'Oferta 9' },
-  { link: '', img: '/assets/images/ofertas/of-4.png', alt: 'Oferta 10' },
+  
 ];
 
 const Ofertas = () => {
